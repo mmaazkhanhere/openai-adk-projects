@@ -1,45 +1,45 @@
-2025-08-03 15:58:44 | DEBUG    | app | 
+2025-08-03 17:59:21 | DEBUG    | app | 
 ##-------------------------------##
-2025-08-03 15:58:44 | DEBUG    | app | Subject: Critical Issue with Website Downtime
-2025-08-03 15:58:44 | DEBUG    | app | Email: Our website has been down since this morning, and customers are complaining they can’t place orders. This is urgent as we’re losing sales every hour. Please help immediately!
+2025-08-03 17:59:21 | DEBUG    | app | Subject: Critical Issue with Website Downtime
+2025-08-03 17:59:21 | DEBUG    | app | Email: Our website has been down since this morning, and customers are complaining they can’t place orders. This is urgent as we’re losing sales every hour. Please help immediately!
 
 
-2025-08-03 15:58:50 | DEBUG    | app | Result: [CategorizationResponse(category=<Category.URGENT: 'urgent'>, summary='Website down causing loss of sales. Immediate assistance needed.', priority='high', query=None, company=None, contact_person=None, product_interest=None)]
-2025-08-03 15:58:50 | DEBUG    | app | ##-------------------------------##
+2025-08-03 17:59:33 | DEBUG    | app | Result: category=<Category.URGENT: 'urgent'> summary='Website down, customers unable to place orders, urgent assistance needed.' priority='high' query=None company=None contact_person=None product_interest=None
+2025-08-03 17:59:33 | DEBUG    | app | ##-------------------------------##
 
-2025-08-03 15:58:50 | DEBUG    | app | 
+2025-08-03 17:59:33 | DEBUG    | app | 
 ##-------------------------------##
-2025-08-03 15:58:50 | DEBUG    | app | Subject: Question About Account Setup
-2025-08-03 15:58:50 | DEBUG    | app | Email: Hi, I’m trying to set up my account but keep getting an error message when I try to verify my email. Can you guide me through the process?
+2025-08-03 17:59:33 | DEBUG    | app | Subject: Question About Account Setup
+2025-08-03 17:59:33 | DEBUG    | app | Email: Hi, I’m trying to set up my account but keep getting an error message when I try to verify my email. Can you guide me through the process?
 
 
-2025-08-03 15:58:54 | DEBUG    | app | Result: action='Email response generated' email_response="Dear Customer,\n\nThank you for reaching out about the issue you're experiencing during email verification. We’ve forwarded your concern to our support team, and you can expect a response within 24-48 hours. Please contact support@example.com if you have additional questions or details.\n\nBest regards,\n[Your Company] Support Team"
-2025-08-03 15:58:54 | DEBUG    | app | ##-------------------------------##
+2025-08-03 17:59:37 | DEBUG    | app | Result: action='Email response generated' email_response="Dear Customer,\n\nThank you for reaching out about the error you're encountering during email verification in account setup. Our support team is aware of this issue, and you can expect a resolution within 24-48 hours. Meanwhile, please feel free to provide any additional details by contacting support@example.com.\n\nBest regards,\n[Your Company] Support Team"
+2025-08-03 17:59:37 | DEBUG    | app | ##-------------------------------##
 
-2025-08-03 15:58:54 | DEBUG    | app | 
+2025-08-03 17:59:37 | DEBUG    | app | 
 ##-------------------------------##
-2025-08-03 15:58:54 | DEBUG    | app | Subject: Feedback on Your Recent Update
-2025-08-03 15:58:54 | DEBUG    | app | Email: I noticed your platform got a new update. It looks great! Can you share more about the new features and how they benefit users?
+2025-08-03 17:59:37 | DEBUG    | app | Subject: Feedback on Your Recent Update
+2025-08-03 17:59:37 | DEBUG    | app | Email: I noticed your platform got a new update. It looks great! Can you share more about the new features and how they benefit users?
 
 
-2025-08-03 15:58:57 | DEBUG    | app | Result: action='Escalated to human agent' email_response='null'
-2025-08-03 15:58:57 | DEBUG    | app | ##-------------------------------##
+2025-08-03 17:59:41 | DEBUG    | app | Result: action='No response generated' email_response=''
+2025-08-03 17:59:41 | DEBUG    | app | ##-------------------------------##
 
-2025-08-03 15:58:57 | DEBUG    | app | 
+2025-08-03 17:59:41 | DEBUG    | app | 
 ##-------------------------------##
-2025-08-03 15:58:57 | DEBUG    | app | Subject: Inquiry About Your Pro Plan
-2025-08-03 15:58:57 | DEBUG    | app | Email: We’re a small business looking to upgrade to your Pro Plan. Could you send me details on pricing, features, and any available demos?
+2025-08-03 17:59:41 | DEBUG    | app | Subject: Inquiry About Your Pro Plan
+2025-08-03 17:59:41 | DEBUG    | app | Email: We’re a small business looking to upgrade to your Pro Plan. Could you send me details on pricing, features, and any available demos?
 
 
-2025-08-03 15:59:04 | DEBUG    | app | Result: action='Email response generated' email_response='Dear Customer,\n\nThank you for your interest in upgrading to our Pro Plan. We’re excited to help your business grow with our advanced features. A sales representative will contact you shortly to provide detailed information on pricing, features, and available demos. You should hear from us within 24-48 hours.\n\nIn the meantime, feel free to reach out to sales@example.com if you have immediate questions.\n\nBest regards,\n[Your Company] Sales Team'
-2025-08-03 15:59:04 | DEBUG    | app | ##-------------------------------##
+2025-08-03 17:59:48 | DEBUG    | app | Result: action='Email response generated' email_response="Dear Customer,\n\nThank you for your interest in upgrading to our Pro Plan. We're excited to provide you with more information. Our Pro Plan includes a comprehensive suite of features designed to enhance your business operations.\n\nA sales representative will reach out to you shortly to discuss pricing, features, and arrange a demo. You can expect a response within 24-48 hours. Meanwhile, feel free to contact sales@example.com for any immediate questions.\n\nBest regards,\n[Your Company] Sales Team"
+2025-08-03 17:59:48 | DEBUG    | app | ##-------------------------------##
 
-2025-08-03 15:59:04 | DEBUG    | app | 
+2025-08-03 17:59:48 | DEBUG    | app | 
 ##-------------------------------##
-2025-08-03 15:59:04 | DEBUG    | app | Subject: You’ve Been Selected for a Free Vacation!
-2025-08-03 15:59:04 | DEBUG    | app | Email: Congratulations! You’ve won a free vacation to Hawaii. Click the link below to claim your prize before it expires!
+2025-08-03 17:59:48 | DEBUG    | app | Subject: You’ve Been Selected for a Free Vacation!
+2025-08-03 17:59:48 | DEBUG    | app | Email: Congratulations! You’ve won a free vacation to Hawaii. Click the link below to claim your prize before it expires!
 
 
-2025-08-03 15:59:07 | DEBUG    | app | Result: [CategorizationResponse(category=<Category.SPAM: 'spam'>, summary=None, priority=None, query=None, company=None, contact_person=None, product_interest=None)]
-2025-08-03 15:59:07 | DEBUG    | app | ##-------------------------------##
+2025-08-03 17:59:53 | DEBUG    | app | Result: category=<Category.SPAM: 'spam'> summary='Email claims recipient won a free vacation to Hawaii and prompts to click a link to claim the prize.' priority=None query=None company=None contact_person=None product_interest=None
+2025-08-03 17:59:53 | DEBUG    | app | ##-------------------------------##
 
