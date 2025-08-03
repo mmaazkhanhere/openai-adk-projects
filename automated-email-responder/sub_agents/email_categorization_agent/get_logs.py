@@ -79,6 +79,21 @@ class AppLogger:
     def critical(self, msg: str, **kwargs):
         self.logger.critical(msg, **kwargs)
 
+    def tool_call(self, tool_name: str, input_args: dict, output: str):
+        """Special logging format for tool calls"""
+        msg = (f"\n🔧 TOOL CALL: {tool_name}\n"
+                f"   Input: {input_args}\n"
+                f"   Output: {output}\n"
+                f"   Timestamp: {datetime.now().isoformat()}")
+        self.logger.debug(msg)
+        
+    def tool_result(self, tool_name: str, result: str):
+        """Logging for tool results"""
+        msg = (f"\n✅ TOOL RESULT: {tool_name}\n"
+               f"   Result: {result}\n"
+               f"   Timestamp: {datetime.now().isoformat()}")
+        self.logger.debug(msg)
+
 class ColoredFormatter(logging.Formatter):
     """Add color to console logs for better readability"""
     COLORS = {

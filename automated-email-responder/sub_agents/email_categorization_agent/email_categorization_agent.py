@@ -2,18 +2,18 @@ from get_logs import logger
 from agents import Agent, Runner
 from dotenv import load_dotenv
 
-from prompts import EMAIL_CATEGORIZATION_PROMPT
 from schema import AgentResponse
-from sub_agents.urgent_and_support_agent import urgent_and_support_agent
+from sub_agents.categorization_agent import categorization_agent
+from sub_agents.router_agent import router_agent
 
 load_dotenv()
 
 
-categorization_agent = Agent(
+email_categorization_agent = Agent(
     name="EmailCategorizationAgent",
     # instructions=EMAIL_CATEGORIZATION_PROMPT,
-    output_type=AgentResponse,
-    handoffs=[urgent_and_support_agent]
+    output_type=list[AgentResponse],
+    handoffs=[categorization_agent, router_agent]
 )
 
 
@@ -44,7 +44,8 @@ for email in emails:
     logger.debug(f"\n##-------------------------------##")
     logger.debug(f"Subject: {email['subject']}")
     logger.debug(f"Email: {email['email']}\n\n")
-    result = Runner.run_sync(categorization_agent, email["email"])
-    logger.debug(f"Category: {result.final_output.category.value}\nSummary: {result.final_output.summary}\nPriority: {result.final_output.priority.value}\n")
+    result = Runner.run_sync(email_categorization_agent, email["email"])
+    logger.debug(f"Result: {result.final_output}")
+    # logger.debug(f"Category: {result.final_output.category.value}\nSummary: {result.final_output.summary}\nPriority: {result.final_output.priority.value}\n")
     logger.debug(f"##-------------------------------##\n")
 

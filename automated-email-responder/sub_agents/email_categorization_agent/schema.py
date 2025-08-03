@@ -13,7 +13,15 @@ class Priority(Enum):
     MEDIUM = "medium"
     LOW = "low"
 
-class AgentResponse(BaseModel):
+class CategorizationAgentResponse(BaseModel):
     category: Category = Field(..., description="Category of the email")
-    summary: str = Field(..., description="Summary of the email")
-    priority: Priority = Field(..., description="Priority of the email")
+    reason: str = Field(..., description="Reason for the category")
+
+class AgentResponse(BaseModel):
+    category: Category  # The classification of the email: Urgent, Support Request, General Inquiry, Sales Lead, or Spam
+    summary: str | None = None  # Brief summary of the email content (for Urgent/Support Request)
+    priority: None| str = None  # Priority level: High, Medium, or Low (for Urgent/Support Request)
+    query: None| str = None  # Extracted query/question (for General Inquiry)
+    company: None| str = None  # Company name (for Sales Lead, default "Unknown")
+    contact_person: None| str = None  # Contact person/email (for Sales Lead, default "Unknown")
+    product_interest: None| str = None
