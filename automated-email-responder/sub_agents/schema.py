@@ -1,0 +1,13 @@
+from enum import Enum
+from pydantic import BaseModel, Field
+
+class Category(Enum):
+    URGENT = "urgent"
+    SUPPORT_REQUEST = "support_request"
+    SALES_LEAD = "sales_lead"
+    GENERAL_INQUIRY = "general_inquiry"
+    SPAM = "spam"
+
+class EmailCategory(BaseModel):
+    category: Category = Field(..., description="Category of the email")
+    reason: str = Field(..., description="Reason for categorization")
