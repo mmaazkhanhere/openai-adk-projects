@@ -1,0 +1,60 @@
+2025-08-03 12:53:51 | DEBUG    | app | 
+##-------------------------------##
+2025-08-03 12:53:51 | DEBUG    | app | Subject: Critical Issue with Website Downtime
+2025-08-03 12:53:51 | DEBUG    | app | Email: Our website has been down since this morning, and customers are complaining they can’t place orders. This is urgent as we’re losing sales every hour. Please help immediately!
+
+
+2025-08-03 12:53:54 | DEBUG    | app | Category: urgent
+Summary: The website is down, preventing customers from placing orders, leading to a loss in sales.
+Priority: high
+
+2025-08-03 12:53:54 | DEBUG    | app | ##-------------------------------##
+
+2025-08-03 12:53:54 | DEBUG    | app | 
+##-------------------------------##
+2025-08-03 12:53:54 | DEBUG    | app | Subject: Question About Account Setup
+2025-08-03 12:53:54 | DEBUG    | app | Email: Hi, I’m trying to set up my account but keep getting an error message when I try to verify my email. Can you guide me through the process?
+
+
+2025-08-03 12:53:56 | DEBUG    | app | Category: support_request
+Summary: User is experiencing an error during email verification while setting up an account.
+Priority: high
+
+2025-08-03 12:53:56 | DEBUG    | app | ##-------------------------------##
+
+2025-08-03 12:53:56 | DEBUG    | app | 
+##-------------------------------##
+2025-08-03 12:53:56 | DEBUG    | app | Subject: Feedback on Your Recent Update
+2025-08-03 12:53:56 | DEBUG    | app | Email: I noticed your platform got a new update. It looks great! Can you share more about the new features and how they benefit users?
+
+
+2025-08-03 12:53:57 | DEBUG    | app | Category: general_inquiry
+Summary: User inquires about new features and benefits after a platform update.
+Priority: low
+
+2025-08-03 12:53:57 | DEBUG    | app | ##-------------------------------##
+
+2025-08-03 12:53:57 | DEBUG    | app | 
+##-------------------------------##
+2025-08-03 12:53:57 | DEBUG    | app | Subject: Inquiry About Your Pro Plan
+2025-08-03 12:53:57 | DEBUG    | app | Email: We’re a small business looking to upgrade to your Pro Plan. Could you send me details on pricing, features, and any available demos?
+
+
+2025-08-03 12:53:58 | DEBUG    | app | Category: sales_lead
+Summary: Inquiry about upgrading to Pro Plan with request for pricing, features, and demos.
+Priority: medium
+
+2025-08-03 12:53:58 | DEBUG    | app | ##-------------------------------##
+
+2025-08-03 12:53:58 | DEBUG    | app | 
+##-------------------------------##
+2025-08-03 12:53:58 | DEBUG    | app | Subject: You’ve Been Selected for a Free Vacation!
+2025-08-03 12:53:58 | DEBUG    | app | Email: Congratulations! You’ve won a free vacation to Hawaii. Click the link below to claim your prize before it expires!
+
+
+2025-08-03 12:54:00 | DEBUG    | app | Category: spam
+Summary: Email claiming the recipient has won a free vacation to Hawaii with a link to claim the prize.
+Priority: low
+
+2025-08-03 12:54:00 | DEBUG    | app | ##-------------------------------##
+

@@ -8,6 +8,12 @@ class Category(Enum):
     GENERAL_INQUIRY = "general_inquiry"
     SPAM = "spam"
 
-class EmailCategory(BaseModel):
+class Priority(Enum):
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
+
+class AgentResponse(BaseModel):
     category: Category = Field(..., description="Category of the email")
-    reason: str = Field(..., description="Reason for categorization")
+    summary: str = Field(..., description="Summary of the email")
+    priority: Priority = Field(..., description="Priority of the email")
