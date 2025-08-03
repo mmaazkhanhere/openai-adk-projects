@@ -2,20 +2,19 @@ from get_logs import logger
 from agents import Agent, Runner
 from dotenv import load_dotenv
 
-from schema import AgentResponse
-from sub_agents.categorization_agent import categorization_agent
-from sub_agents.router_agent import router_agent
+from schema import EmailWriterResponse
+
+from sub_agents.email_categorization_agent.agent import email_categorization_agent
+from sub_agents.email_writer_agent.agent import email_writer_agent
 
 load_dotenv()
 
 
-email_categorization_agent = Agent(
-    name="EmailCategorizationAgent",
-    # instructions=EMAIL_CATEGORIZATION_PROMPT,
-    output_type=list[AgentResponse],
-    handoffs=[categorization_agent, router_agent]
+email_automation_agent = Agent(
+    name="EmailAutomationAgent",
+    output_type=EmailWriterResponse,
+    handoffs=[email_categorization_agent, email_writer_agent]
 )
-
 
 emails: list[dict[str, str]] = [
   {
@@ -44,8 +43,7 @@ for email in emails:
     logger.debug(f"\n##-------------------------------##")
     logger.debug(f"Subject: {email['subject']}")
     logger.debug(f"Email: {email['email']}\n\n")
-    result = Runner.run_sync(email_categorization_agent, email["email"])
+    result = Runner.run_sync(email_automation_agent, email["email"])
     logger.debug(f"Result: {result.final_output}")
     # logger.debug(f"Category: {result.final_output.category.value}\nSummary: {result.final_output.summary}\nPriority: {result.final_output.priority.value}\n")
     logger.debug(f"##-------------------------------##\n")
-

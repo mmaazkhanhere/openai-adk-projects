@@ -2,7 +2,7 @@ from get_logs import logger
 from agents import Agent, function_tool
 from dotenv import load_dotenv
 
-from schema import AgentResponse, Priority
+from schema import CategorizationResponse, Priority
 from prompts import ROUTER_AGENT_PROMPT
 
 load_dotenv()
@@ -85,5 +85,5 @@ router_agent = Agent(
     name="RouterAgent",
     instructions=ROUTER_AGENT_PROMPT,
     tools=[send_slack_message, push_data_to_crm, query_knowledge_base],
-    output_type=AgentResponse,
+    output_type=CategorizationResponse,
 )
