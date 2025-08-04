@@ -18,7 +18,7 @@ load_dotenv()
 email_automation_agent = Agent(
     name="EmailAutomationAgent",
     instructions=RECOMMENDED_PROMPT_PREFIX + ORCHESTRATOR_PROMPT,
-    handoff_description="This agent delegates incoming emails to categorization_agent for classification, then routes to urgent_and_support_agent (Urgent/Support Request), sales_agent (Sales Lead), general_agent (General Inquiry), or spam_agent (Spam) based on the category.",
+    handoff_description="This agent delegates incoming emails to categorization_agent for classification",
     handoffs=[categorization_agent],
     output_type=EmailWriterResponse
 )

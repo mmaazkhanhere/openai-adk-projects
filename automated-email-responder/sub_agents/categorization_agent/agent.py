@@ -15,5 +15,6 @@ load_dotenv()
 categorization_agent = Agent(
     name="EmailCategorizationAgent",
     instructions=RECOMMENDED_PROMPT_PREFIX + EMAIL_CATEGORIZATION_PROMPT,
+    handoff_description="This agent categorize the email and based on the category handoff to other agents",
     handoffs=[urgent_and_support_agent, sales_agent, general_agent, spam_agent]
 )
