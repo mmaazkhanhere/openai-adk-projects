@@ -2,7 +2,7 @@ from get_logs import logger
 from agents import Agent, function_tool, ModelSettings
 from dotenv import load_dotenv
 
-from schema import Priority
+from schema import Priority, EmailWriterResponse
 from prompts import URGENT_AND_SUPPORT_PROMPT
 
 load_dotenv()
@@ -36,5 +36,6 @@ urgent_and_support_agent = Agent(
     name="UrgentAndSupportAgent",
     instructions=URGENT_AND_SUPPORT_PROMPT,
     tools=[send_slack_message],
-    model_settings=ModelSettings(tool_choice='send_slack_message')
+    model_settings=ModelSettings(tool_choice='send_slack_message'),
+    output_type=EmailWriterResponse
 )

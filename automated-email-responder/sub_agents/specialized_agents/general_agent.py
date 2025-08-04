@@ -2,7 +2,7 @@ from get_logs import logger
 from agents import Agent, function_tool, ModelSettings
 from dotenv import load_dotenv
 
-from schema import Priority
+from schema import EmailWriterResponse
 from prompts import GENERAL_INQUIRY_PROMPT
 
 load_dotenv()
@@ -68,5 +68,6 @@ general_agent = Agent(
     name="GeneralInquiryAgent",
     instructions=GENERAL_INQUIRY_PROMPT,
     tools=[query_knowledge_base],
-    model_settings=ModelSettings(tool_choice='query_knowledge_base')
+    model_settings=ModelSettings(tool_choice='query_knowledge_base'),
+    output_type=EmailWriterResponse
 )

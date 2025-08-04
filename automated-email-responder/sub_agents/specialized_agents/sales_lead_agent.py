@@ -2,7 +2,7 @@ from get_logs import logger
 from agents import Agent, function_tool, ModelSettings
 from dotenv import load_dotenv
 
-from schema import Priority
+from schema import EmailWriterResponse
 from prompts import SALES_LEAD_PROMPT
 
 load_dotenv()
@@ -33,5 +33,6 @@ sales_agent = Agent(
     name="SalesAgent",
     instructions=SALES_LEAD_PROMPT,
     tools=[push_data_to_crm],
-    model_settings=ModelSettings(tool_choice='push_data_to_crm')
+    model_settings=ModelSettings(tool_choice='push_data_to_crm'),
+    output_type=EmailWriterResponse
 )
