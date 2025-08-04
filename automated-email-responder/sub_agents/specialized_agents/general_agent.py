@@ -1,29 +1,11 @@
 from get_logs import logger
-from agents import Agent, function_tool
+from agents import Agent, function_tool, ModelSettings
 from dotenv import load_dotenv
 
-from schema import CategorizationResponse, Priority
-from prompts import ROUTER_AGENT_PROMPT
+from schema import Priority
+from prompts import GENERAL_INQUIRY_PROMPT
 
 load_dotenv()
-
-@function_tool
-def send_slack_message(summary: str, priority: Priority):
-    """A function that is called when urgent or support request email is received. It receives summary and priority and it is send to slack team"""
-    logger.tool_call("send_slack_message", {"summary": summary, "priority": priority}, "")
-    logger.debug(f"Sending message to Slack: {summary}")
-    logger.debug(f"Priority: {priority}")
-    logger.debug("Message sent to Slack")
-    return "Message sent to Slack"
-
-@function_tool
-def push_data_to_crm(company_name: str, contact_person: str):
-    """A function that is called when email is of category sales lead. It extracts company name and contact person from email and add it to CRM"""
-    logger.tool_call("push_data_to_crm", {"company_name": company_name, "contact_person": contact_person}, "")
-    """A function that data to crm. It receives company name and contact person as an input args"""
-    logger.debug(f"Pushing data to CRM: {company_name}, {contact_person}")
-    logger.debug("Data pushed to CRM")
-    return "Data pushed to CRM"
 
 @function_tool
 def query_knowledge_base(query: str):
@@ -81,9 +63,10 @@ def query_knowledge_base(query: str):
             logger.debug("Knowledge base queried")
             return "No answer found in knowledge base. Escalating to another agent for email response drafting."
 
-router_agent = Agent(
-    name="RouterAgent",
-    instructions=ROUTER_AGENT_PROMPT,
-    tools=[send_slack_message, push_data_to_crm, query_knowledge_base],
-    output_type=CategorizationResponse,
+
+general_agent = Agent(
+    name="GeneralInquiryAgent",
+    instructions=GENERAL_INQUIRY_PROMPT,
+    tools=[query_knowledge_base],
+    model_settings=ModelSettings(tool_choice='query_knowledge_base')
 )

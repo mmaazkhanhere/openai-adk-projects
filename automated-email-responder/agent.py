@@ -4,8 +4,10 @@ from dotenv import load_dotenv
 
 from schema import EmailWriterResponse
 
-from sub_agents.email_categorization_agent.agent import email_categorization_agent
-from sub_agents.email_writer_agent.agent import email_writer_agent
+from sub_agents.categorization_agent.agent import categorization_agent
+from sub_agents.specialized_agents.urgent_and_support_request_agent import urgent_and_support_agent
+from sub_agents.specialized_agents.sales_lead_agent import sales_agent
+from sub_agents.specialized_agents.general_agent import general_agent
 
 load_dotenv()
 
@@ -13,7 +15,7 @@ load_dotenv()
 email_automation_agent = Agent(
     name="EmailAutomationAgent",
     output_type=EmailWriterResponse,
-    handoffs=[email_categorization_agent, email_writer_agent]
+    handoffs=[categorization_agent, urgent_and_support_agent, sales_agent, general_agent]
 )
 
 emails: list[dict[str, str]] = [
