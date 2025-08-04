@@ -1,45 +1,153 @@
-2025-08-03 17:59:21 | DEBUG    | app | 
+2025-08-04 14:27:19 | [36mDEBUG[0m | app | 
 ##-------------------------------##
-2025-08-03 17:59:21 | DEBUG    | app | Subject: Critical Issue with Website Downtime
-2025-08-03 17:59:21 | DEBUG    | app | Email: Our website has been down since this morning, and customers are complaining they can’t place orders. This is urgent as we’re losing sales every hour. Please help immediately!
+2025-08-04 14:27:19 | [36mDEBUG[0m | app | Sender: jane.doe@acmecorp.com
+2025-08-04 14:27:19 | [36mDEBUG[0m | app | Subject: Critical Issue with Website Downtime
+2025-08-04 14:27:19 | [36mDEBUG[0m | app | Email: Our website has been down since this morning, and customers are complaining they canâ€™t place orders. This is urgent as weâ€™re losing sales every hour. Please help immediately!
 
 
-2025-08-03 17:59:33 | DEBUG    | app | Result: category=<Category.URGENT: 'urgent'> summary='Website down, customers unable to place orders, urgent assistance needed.' priority='high' query=None company=None contact_person=None product_interest=None
-2025-08-03 17:59:33 | DEBUG    | app | ##-------------------------------##
+2025-08-04 14:27:25 | [36mDEBUG[0m | app | 
+[TOOL] send_slack_message
+   Input: {'summary': 'Website is down, preventing customers from placing orders, causing loss of sales.', 'priority': <Priority.HIGH: 'high'>}
+   Output: 
+   Timestamp: 2025-08-04T14:27:25.439005
+2025-08-04 14:27:25 | [36mDEBUG[0m | app | Sending message to Slack: Website is down, preventing customers from placing orders, causing loss of sales.
+2025-08-04 14:27:25 | [36mDEBUG[0m | app | Priority: Priority.HIGH
+2025-08-04 14:27:25 | [36mDEBUG[0m | app | Message sent to Slack
+2025-08-04 14:27:29 | [36mDEBUG[0m | app | Result: action='send_slack_message executed with high priority for urgent website outage issue.' email_response='Dear Customer,\n\nI apologize for the inconvenience caused by the website outage. We understand the urgency as it affects your sales.\n\nOur technical team is actively investigating the issue and will update you within 4 hours. Please let us know if you experience any other issues.\n\nThank you for your patience. Feel free to reach out at support@scribe.com for immediate assistance.\n\nBest regards,  \nMaaz Khan  \nCustomer Support Team  \nThe Scribe  \nsupport@scribe.com'
+2025-08-04 14:27:29 | [36mDEBUG[0m | app | ##-------------------------------##
 
-2025-08-03 17:59:33 | DEBUG    | app | 
+2025-08-04 14:27:29 | [36mDEBUG[0m | app | 
 ##-------------------------------##
-2025-08-03 17:59:33 | DEBUG    | app | Subject: Question About Account Setup
-2025-08-03 17:59:33 | DEBUG    | app | Email: Hi, I’m trying to set up my account but keep getting an error message when I try to verify my email. Can you guide me through the process?
+2025-08-04 14:27:29 | [36mDEBUG[0m | app | Sender: bob.smith@gmail.com
+2025-08-04 14:27:29 | [36mDEBUG[0m | app | Subject: Question About Account Setup
+2025-08-04 14:27:29 | [36mDEBUG[0m | app | Email: Hi, Iâ€™m trying to set up my account but keep getting an error message when I try to verify my email. Can you guide me through the process?
 
 
-2025-08-03 17:59:37 | DEBUG    | app | Result: action='Email response generated' email_response="Dear Customer,\n\nThank you for reaching out about the error you're encountering during email verification in account setup. Our support team is aware of this issue, and you can expect a resolution within 24-48 hours. Meanwhile, please feel free to provide any additional details by contacting support@example.com.\n\nBest regards,\n[Your Company] Support Team"
-2025-08-03 17:59:37 | DEBUG    | app | ##-------------------------------##
+2025-08-04 14:27:34 | [36mDEBUG[0m | app | 
+[TOOL] send_slack_message
+   Input: {'summary': 'Customer facing email verification error during account setup.', 'priority': <Priority.MEDIUM: 'medium'>}
+   Output: 
+   Timestamp: 2025-08-04T14:27:34.667017
+2025-08-04 14:27:34 | [36mDEBUG[0m | app | Sending message to Slack: Customer facing email verification error during account setup.
+2025-08-04 14:27:34 | [36mDEBUG[0m | app | Priority: Priority.MEDIUM
+2025-08-04 14:27:34 | [36mDEBUG[0m | app | Message sent to Slack
+2025-08-04 14:27:41 | [36mDEBUG[0m | app | Result: action='Sent Slack notification with medium priority.' email_response="Dear Customer,\n\nThank you for reaching out to us about the email verification error you're encountering during account setup. We understand how important it is to get your account up and running smoothly, and weâ€™re here to assist.\n\nCould you please share the specific error message you are seeing? In the meantime, our team is investigating this issue and will get back to you within 24 hours to guide you through the process.\n\nThank you for your patience. For immediate assistance, feel free to contact us at support@scribe.com.\n\nBest regards,  \nMaaz Khan  \nCustomer Support Team  \nThe Scribe  \nsupport@scribe.com"
+2025-08-04 14:27:41 | [36mDEBUG[0m | app | ##-------------------------------##
 
-2025-08-03 17:59:37 | DEBUG    | app | 
+2025-08-04 14:27:41 | [36mDEBUG[0m | app | 
 ##-------------------------------##
-2025-08-03 17:59:37 | DEBUG    | app | Subject: Feedback on Your Recent Update
-2025-08-03 17:59:37 | DEBUG    | app | Email: I noticed your platform got a new update. It looks great! Can you share more about the new features and how they benefit users?
+2025-08-04 14:27:41 | [36mDEBUG[0m | app | Sender: emma.brown@outlook.com
+2025-08-04 14:27:41 | [36mDEBUG[0m | app | Subject: Feedback on Your Recent Update
+2025-08-04 14:27:41 | [36mDEBUG[0m | app | Email: I noticed your platform got a new update. It looks great! Can you share more about the new features and how they benefit users?
 
 
-2025-08-03 17:59:41 | DEBUG    | app | Result: action='No response generated' email_response=''
-2025-08-03 17:59:41 | DEBUG    | app | ##-------------------------------##
+2025-08-04 14:27:43 | [36mDEBUG[0m | app | Result: {"category": "General Inquiry", "reason": "The email contains a non-urgent inquiry about new features without requesting technical support."}
+2025-08-04 14:27:43 | [36mDEBUG[0m | app | ##-------------------------------##
 
-2025-08-03 17:59:41 | DEBUG    | app | 
+2025-08-04 14:27:43 | [36mDEBUG[0m | app | 
 ##-------------------------------##
-2025-08-03 17:59:41 | DEBUG    | app | Subject: Inquiry About Your Pro Plan
-2025-08-03 17:59:41 | DEBUG    | app | Email: We’re a small business looking to upgrade to your Pro Plan. Could you send me details on pricing, features, and any available demos?
+2025-08-04 14:27:43 | [36mDEBUG[0m | app | Sender: alice.johnson@smallbiz.com
+2025-08-04 14:27:43 | [36mDEBUG[0m | app | Subject: Inquiry About Your Pro Plan
+2025-08-04 14:27:43 | [36mDEBUG[0m | app | Email: Weâ€™re a small business looking to upgrade to your Pro Plan. Could you send me details on pricing, features, and any available demos?
 
 
-2025-08-03 17:59:48 | DEBUG    | app | Result: action='Email response generated' email_response="Dear Customer,\n\nThank you for your interest in upgrading to our Pro Plan. We're excited to provide you with more information. Our Pro Plan includes a comprehensive suite of features designed to enhance your business operations.\n\nA sales representative will reach out to you shortly to discuss pricing, features, and arrange a demo. You can expect a response within 24-48 hours. Meanwhile, feel free to contact sales@example.com for any immediate questions.\n\nBest regards,\n[Your Company] Sales Team"
-2025-08-03 17:59:48 | DEBUG    | app | ##-------------------------------##
+2025-08-04 14:27:49 | [36mDEBUG[0m | app | 
+[TOOL] push_data_to_crm
+   Input: {'company_name': 'Unknown', 'contact_person': 'Unknown'}
+   Output: 
+   Timestamp: 2025-08-04T14:27:49.897193
+2025-08-04 14:27:49 | [36mDEBUG[0m | app | Pushing data to CRM: Unknown, Unknown
+2025-08-04 14:27:49 | [36mDEBUG[0m | app | Data pushed to CRM
+2025-08-04 14:27:52 | [36mDEBUG[0m | app | 
+[TOOL] push_data_to_crm
+   Input: {'company_name': 'Small Business', 'contact_person': 'Customer'}
+   Output: 
+   Timestamp: 2025-08-04T14:27:52.756315
+2025-08-04 14:27:52 | [36mDEBUG[0m | app | Pushing data to CRM: Small Business, Customer
+2025-08-04 14:27:52 | [36mDEBUG[0m | app | Data pushed to CRM
+2025-08-04 14:27:52 | [36mDEBUG[0m | app | 
+[TOOL] push_data_to_crm
+   Input: {'company_name': 'Unknown', 'contact_person': 'Unknown'}
+   Output: 
+   Timestamp: 2025-08-04T14:27:52.756315
+2025-08-04 14:27:52 | [36mDEBUG[0m | app | Pushing data to CRM: Unknown, Unknown
+2025-08-04 14:27:52 | [36mDEBUG[0m | app | Data pushed to CRM
+2025-08-04 14:27:56 | [36mDEBUG[0m | app | Result: action="Lead added to CRM with company name as 'Unknown' and contact person as 'Unknown'." email_response="Dear Customer,\n\nThank you for reaching out about upgrading to our Pro Plan. We're excited about your interest and are eager to assist further.\n\nOur team will share detailed information on pricing, features, and demo availability very soon. Please let us know if you have specific requirements or preferred times for a demo.\n\nWe look forward to supporting your business needs. Feel free to contact us at sales@scribe.com with any questions.\n\nBest regards,  \nMaaz Khan  \nSales Team  \nThe Scribe  \nsales@scribe.com"
+2025-08-04 14:27:56 | [36mDEBUG[0m | app | ##-------------------------------##
 
-2025-08-03 17:59:48 | DEBUG    | app | 
+2025-08-04 14:27:56 | [36mDEBUG[0m | app | 
 ##-------------------------------##
-2025-08-03 17:59:48 | DEBUG    | app | Subject: You’ve Been Selected for a Free Vacation!
-2025-08-03 17:59:48 | DEBUG    | app | Email: Congratulations! You’ve won a free vacation to Hawaii. Click the link below to claim your prize before it expires!
+2025-08-04 14:27:56 | [36mDEBUG[0m | app | Sender: promo@deals4u.com
+2025-08-04 14:27:56 | [36mDEBUG[0m | app | Subject: Youâ€™ve Been Selected for a Free Vacation!
+2025-08-04 14:27:56 | [36mDEBUG[0m | app | Email: Congratulations! Youâ€™ve won a free vacation to Hawaii. Click the link below to claim your prize before it expires!
 
 
-2025-08-03 17:59:53 | DEBUG    | app | Result: category=<Category.SPAM: 'spam'> summary='Email claims recipient won a free vacation to Hawaii and prompts to click a link to claim the prize.' priority=None query=None company=None contact_person=None product_interest=None
-2025-08-03 17:59:53 | DEBUG    | app | ##-------------------------------##
+2025-08-04 14:28:00 | [36mDEBUG[0m | app | Result: action='Email ignored' email_response='None'
+2025-08-04 14:28:00 | [36mDEBUG[0m | app | ##-------------------------------##
+
+2025-08-04 14:28:00 | [36mDEBUG[0m | app | 
+##-------------------------------##
+2025-08-04 14:28:00 | [36mDEBUG[0m | app | Sender: john.doe@example.com
+2025-08-04 14:28:00 | [36mDEBUG[0m | app | Subject: Urgent Help Needed
+2025-08-04 14:28:00 | [36mDEBUG[0m | app | Email: 
+
+
+2025-08-04 14:28:02 | [36mDEBUG[0m | app | Result: Please provide the email content and subject for classification.
+2025-08-04 14:28:02 | [36mDEBUG[0m | app | ##-------------------------------##
+
+2025-08-04 14:28:02 | [36mDEBUG[0m | app | 
+##-------------------------------##
+2025-08-04 14:28:02 | [36mDEBUG[0m | app | Sender: 
+2025-08-04 14:28:02 | [36mDEBUG[0m | app | Subject: General Question
+2025-08-04 14:28:02 | [36mDEBUG[0m | app | Email: Can you tell me more about your software? Iâ€™m curious about its features.
+
+
+2025-08-04 14:28:04 | [36mDEBUG[0m | app | Result: action='Handoff to EmailCategorizationAgent' email_response="I'll forward your inquiry to the appropriate department to provide detailed information about our software and its features."
+2025-08-04 14:28:04 | [36mDEBUG[0m | app | ##-------------------------------##
+
+2025-08-04 14:28:04 | [36mDEBUG[0m | app | 
+##-------------------------------##
+2025-08-04 14:28:04 | [36mDEBUG[0m | app | Sender: sarah.lee@techfirm.com
+2025-08-04 14:28:04 | [36mDEBUG[0m | app | Subject: Urgent: API Issue + Product Inquiry
+2025-08-04 14:28:04 | [36mDEBUG[0m | app | Email: Our API integration is failing, causing delays in our app. Urgent fix needed! Also, can you share details about your enterprise plan?
+
+
+2025-08-04 14:28:08 | [36mDEBUG[0m | app | 
+[TOOL] send_slack_message
+   Input: {'summary': 'API integration is failing, causing app delays. Urgent fix needed. Request for enterprise plan details.', 'priority': <Priority.HIGH: 'high'>}
+   Output: 
+   Timestamp: 2025-08-04T14:28:08.526408
+2025-08-04 14:28:08 | [36mDEBUG[0m | app | Sending message to Slack: API integration is failing, causing app delays. Urgent fix needed. Request for enterprise plan details.
+2025-08-04 14:28:08 | [36mDEBUG[0m | app | Priority: Priority.HIGH
+2025-08-04 14:28:08 | [36mDEBUG[0m | app | Message sent to Slack
+2025-08-04 14:28:13 | [36mDEBUG[0m | app | Result: action='Sent a Slack notification for urgent API integration issue and request for enterprise plan details.' email_response="Dear Customer,\n\nThank you for reaching out to us with your urgent concern about the API integration issue causing delays in your app. We understand the critical nature of this issue and are prioritizing it for immediate resolution.\n\nOur technical team is already investigating the problem and will update you within the next 4 hours. Any additional details or error messages you've encountered could help expedite the process.\n\nRegarding details on our enterprise plan, I will have our sales team follow up with you shortly to provide all the necessary information.\n\nThank you for your patience and understanding. For further assistance, please contact us at support@scribe.com.\n\nBest regards,  \nMaaz Khan  \nCustomer Support Team  \nThe Scribe  \nsupport@scribe.com"
+2025-08-04 14:28:13 | [36mDEBUG[0m | app | ##-------------------------------##
+
+2025-08-04 14:28:13 | [36mDEBUG[0m | app | 
+##-------------------------------##
+2025-08-04 14:28:13 | [36mDEBUG[0m | app | Sender: mike.wilson@company.com
+2025-08-04 14:28:13 | [36mDEBUG[0m | app | Subject: Question
+2025-08-04 14:28:13 | [36mDEBUG[0m | app | Email: Hey, just checking in. Whatâ€™s up with your platform? Need some info.
+
+
+2025-08-04 14:28:15 | [36mDEBUG[0m | app | Result: Could you provide the subject and body of the email for analysis?
+2025-08-04 14:28:15 | [36mDEBUG[0m | app | ##-------------------------------##
+
+2025-08-04 14:28:15 | [36mDEBUG[0m | app | 
+##-------------------------------##
+2025-08-04 14:28:15 | [36mDEBUG[0m | app | Sender: chris.taylor@yahoo.com
+2025-08-04 14:28:15 | [36mDEBUG[0m | app | Subject: help!!
+2025-08-04 14:28:15 | [36mDEBUG[0m | app | Email: yo, your app crashed on me. fix it quick. also, how much is it to get the premium version?
+
+
+2025-08-04 14:28:19 | [36mDEBUG[0m | app | 
+[TOOL] send_slack_message
+   Input: {'summary': 'App crash reported by customer, inquiry about premium version cost.', 'priority': <Priority.HIGH: 'high'>}
+   Output: 
+   Timestamp: 2025-08-04T14:28:19.796238
+2025-08-04 14:28:19 | [36mDEBUG[0m | app | Sending message to Slack: App crash reported by customer, inquiry about premium version cost.
+2025-08-04 14:28:19 | [36mDEBUG[0m | app | Priority: Priority.HIGH
+2025-08-04 14:28:19 | [36mDEBUG[0m | app | Message sent to Slack
+2025-08-04 14:28:24 | [36mDEBUG[0m | app | Result: action='Sent a Slack message with high priority regarding the app crash and premium version inquiry.' email_response='Dear Customer,\n\nI apologize for the inconvenience caused by the app crash. Rest assured, we are looking into this with urgency.\n\nOur engineers are on it, and weâ€™ll update you within the next 4 hours with the resolution. Regarding your inquiry about the premium version, please contact our sales team at sales@scribe.com for detailed pricing information.\n\nThank you for your patience and understanding. If you have further questions, feel free to reach out at support@scribe.com.\n\nBest regards,  \nMaaz Khan  \nCustomer Support Team  \nThe Scribe  \nsupport@scribe.com'
+2025-08-04 14:28:24 | [36mDEBUG[0m | app | ##-------------------------------##
 

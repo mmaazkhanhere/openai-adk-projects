@@ -31,25 +31,33 @@ class AppLogger:
             datefmt="%Y-%m-%d %H:%M:%S"
         )
         
-        # Console handler (stderr)
+        # Console handler (stderr) with UTF-8 encoding
         console_handler = logging.StreamHandler(sys.stderr)
-        console_handler.setLevel(logging.INFO)  # Only show INFO+ in console
+        console_handler.setLevel(logging.DEBUG)
+        
+        # Fix for Windows encoding issues
+        if sys.platform == "win32":
+            from colorama import just_fix_windows_console
+            just_fix_windows_console()
+        
         console_handler.setFormatter(console_formatter)
         
-        # Debug file handler (all levels)
+        # Debug file handler (all levels) with UTF-8 encoding
         debug_handler = TimedRotatingFileHandler(
-            filename=f"{log_dir}/debug.log",
+            filename=os.path.join(log_dir, "debug.log"),
             when="midnight",
-            backupCount=7
+            backupCount=7,
+            encoding="utf-8"  # Explicit UTF-8 encoding
         )
         debug_handler.setLevel(logging.DEBUG)
         debug_handler.setFormatter(file_formatter)
         
-        # Error file handler (errors only)
+        # Error file handler (errors only) with UTF-8 encoding
         error_handler = TimedRotatingFileHandler(
-            filename=f"{log_dir}/error.log",
+            filename=os.path.join(log_dir, "error.log"),
             when="midnight",
-            backupCount=7
+            backupCount=7,
+            encoding="utf-8"  # Explicit UTF-8 encoding
         )
         error_handler.setLevel(logging.WARNING)
         error_handler.setFormatter(file_formatter)
@@ -81,15 +89,17 @@ class AppLogger:
 
     def tool_call(self, tool_name: str, input_args: dict, output: str):
         """Special logging format for tool calls"""
-        msg = (f"\n🔧 TOOL CALL: {tool_name}\n"
-                f"   Input: {input_args}\n"
-                f"   Output: {output}\n"
-                f"   Timestamp: {datetime.now().isoformat()}")
+        # Use text-based icons instead of emojis
+        msg = (f"\n[TOOL] {tool_name}\n"
+               f"   Input: {input_args}\n"
+               f"   Output: {output}\n"
+               f"   Timestamp: {datetime.now().isoformat()}")
         self.logger.debug(msg)
         
     def tool_result(self, tool_name: str, result: str):
         """Logging for tool results"""
-        msg = (f"\n✅ TOOL RESULT: {tool_name}\n"
+        # Use text-based icons instead of emojis
+        msg = (f"\n[RESULT] {tool_name}\n"
                f"   Result: {result}\n"
                f"   Timestamp: {datetime.now().isoformat()}")
         self.logger.debug(msg)

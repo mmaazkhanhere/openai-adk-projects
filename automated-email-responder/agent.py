@@ -4,13 +4,13 @@ from agents.extensions.handoff_prompt import RECOMMENDED_PROMPT_PREFIX
 from dotenv import load_dotenv
 
 from prompts import ORCHESTRATOR_PROMPT
-# from schema import EmailWriterResponse
+from schema import EmailWriterResponse
 
 from sub_agents.categorization_agent.agent import categorization_agent
-from sub_agents.specialized_agents.urgent_and_support_request_agent import urgent_and_support_agent
-from sub_agents.specialized_agents.sales_lead_agent import sales_agent
-from sub_agents.specialized_agents.general_agent import general_agent
-from sub_agents.specialized_agents.spam_agent import spam_agent
+# from sub_agents.specialized_agents.urgent_and_support_request_agent import urgent_and_support_agent
+# from sub_agents.specialized_agents.sales_lead_agent import sales_agent
+# from sub_agents.specialized_agents.general_agent import general_agent
+# from sub_agents.specialized_agents.spam_agent import spam_agent
 
 load_dotenv()
 
@@ -19,8 +19,8 @@ email_automation_agent = Agent(
     name="EmailAutomationAgent",
     instructions=RECOMMENDED_PROMPT_PREFIX + ORCHESTRATOR_PROMPT,
     handoff_description="This agent delegates incoming emails to categorization_agent for classification, then routes to urgent_and_support_agent (Urgent/Support Request), sales_agent (Sales Lead), general_agent (General Inquiry), or spam_agent (Spam) based on the category.",
-    #output_type=EmailWriterResponse,
-    handoffs=[categorization_agent, urgent_and_support_agent, sales_agent, general_agent, spam_agent]
+    handoffs=[categorization_agent],
+    output_type=EmailWriterResponse
 )
 
 emails: list[dict[str, str]] = [
@@ -83,9 +83,10 @@ emails: list[dict[str, str]] = [
 
 for email in emails:
     logger.debug(f"\n##-------------------------------##")
+    logger.debug(f"Sender: {email['sender']}")
     logger.debug(f"Subject: {email['subject']}")
-    logger.debug(f"Email: {email['email']}\n\n")
-    result = Runner.run_sync(email_automation_agent, email["email"])
+    logger.debug(f"Email: {email['email_content']}\n\n")
+    result = Runner.run_sync(email_automation_agent, email["email_content"])
     logger.debug(f"Result: {result.final_output}")
     # logger.debug(f"Category: {result.final_output.category.value}\nSummary: {result.final_output.summary}\nPriority: {result.final_output.priority.value}\n")
     logger.debug(f"##-------------------------------##\n")
