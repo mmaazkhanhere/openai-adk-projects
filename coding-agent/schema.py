@@ -30,3 +30,6 @@ class ValidationAgentSchema(BaseModel):
     test_results: list[TestResult] = Field(description="List of test results.")
     syntax_check: str = Field(description="Syntax check results.")
     feedback: str = Field(description="Feedback that can be used to optimize the code")
+
+class OptimizedAgentOutput(BaseModel):
+    code: str = Field(description="Optimized code.")

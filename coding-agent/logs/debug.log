@@ -19,3 +19,22 @@
   "clarifications_needed": []
 }
 ```
+2025-08-08 16:12:12 | [32mINFO[0m | app | ```
+{
+  "language": "Python",
+  "main_task": "Create a function to sort a list of numbers",
+  "sub_tasks": [],
+  "constraints": {
+    "input_type": "list of numbers"
+  },
+  "preferences": {
+    "style_guide": "PEP 8",
+    "documentation": "Include docstrings"
+  },
+  "clarifications_needed": [
+    "What sorting algorithm should be used (e.g., quicksort, mergesort)?",
+    "Should the sort be in ascending or descending order?",
+    "How to handle non-numeric values if they appear in the list?"
+  ]
+}
+```
