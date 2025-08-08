@@ -18,7 +18,6 @@ class AnalyzerAgentOutputSchema(BaseModel):
     sub_tasks: list[str] = Field(description="List of sub tasks of the code.")
     constraints: list[str] = Field(description="Constraints of the code.")
     preferences: list[str] = Field(description="Preferences of the code.")
-    clarifications_needed: list[str] = Field(description="List of clarifications needed.")
 
 class SolutionDesignerOutputSchema(BaseModel):
     pseudo_code: str = Field(description="Pseudo code of the solution.")
