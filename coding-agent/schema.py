@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, Field
 
 class AnalyzerAgentOutputSchema(BaseModel):
     language: str = Field(description="Programming language of the code.")
@@ -8,6 +8,6 @@ class AnalyzerAgentOutputSchema(BaseModel):
     preferences: list[str] = Field(description="Preferences of the code.")
     clarifications_needed: list[str] = Field(description="List of clarifications needed.")
 
-    
-
+class CodeGeneratorSchema(BaseModel):
+    code: str = Field(description="Generated code.")
     
