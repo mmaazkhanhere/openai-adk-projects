@@ -63,6 +63,10 @@ carefully read the user's input, identify all explicit and implicit requirements
 - Extract preferences (e.g., coding style, documentation) or infer reasonable defaults (e.g., PEP 8 for Python).
 - If the input is ambiguous, list clarifying questions in the output under a clarifications_needed field.
 - Ensure the output is concise, specific, and aligned with the user’s intent.
+- - If details are missing, make the following reasonable assumptions unless specified otherwise:
+  - Language: Python (default if unspecified).
+  - List any assumptions made under 'preferences' or 'constraints' instead of 'clarifications_needed' unless critical clarification is required that prevents proceeding (e.g., missing core functionality).
+- Only include questions in 'clarifications_needed' if the request is fundamentally unclear (e.g., no task specified).
 
 # Format
 ## Input format: 
@@ -75,12 +79,8 @@ may be informal, lack technical detail, and contain ambiguities. You must analyz
   "language": "string",
   "main_task": "string",
   "sub_tasks": ["string"],
-  "constraints": {
-    "key": "value"
-  },
-  "preferences": {
-    "key": "value"
-  },
+  "constraints": ["constraint list"]
+  "preferences": ["preferences list],
   "clarifications_needed": ["string"]
 }
 ```

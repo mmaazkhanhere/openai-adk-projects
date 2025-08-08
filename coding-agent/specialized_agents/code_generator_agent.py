@@ -7,7 +7,7 @@ from specialized_agents.validation_agent import validation_agent
 code_generator_agent = Agent(
     name="CodeGeneratorAgent",
     instructions=CODE_GENERATOR_PROMPT,
-    #output_type=CodeGeneratorSchema,
+    output_type=CodeGeneratorSchema,
     handoffs=[validation_agent],
-    handoff_description="Pass the generated code to the agent to validate the code by generating code"
+    handoff_description="Gets pseudo in input and generate code based on that. The generated code is delegated to validation_agent to generate and execute tests to validate the code"
 )

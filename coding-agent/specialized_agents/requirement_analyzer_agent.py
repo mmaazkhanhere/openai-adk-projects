@@ -7,7 +7,7 @@ from prompts import ANALYZER_AGENT_PROMPT
 requirement_agent = Agent(
     name="RequirementAnalyzerAgent",
     instructions=ANALYZER_AGENT_PROMPT,
-    #output_type=AnalyzerAgentOutputSchema,
-    handoff_description="Analyzes user requirements and passes structured analysis to solution designer for generating pseudo code for implementing the code",
+    output_type=AnalyzerAgentOutputSchema,
+    handoff_description="This agents gets user request as input, create a requirements for the project and delegate to the solution_designer_agent to create pseudo code solution",
     handoffs=[solution_designer_agent],
 )
